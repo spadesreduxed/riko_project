@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Riko</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0a0a1a;
+      color: #e0e0f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .card {
+      background: #12122a;
+      border: 1px solid #2a2a5a;
+      border-radius: 16px;
+      padding: 3rem;
+      max-width: 700px;
+      text-align: center;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #c084fc; }
+    .subtitle { color: #888; margin-bottom: 2rem; font-size: 1.1rem; }
+    .desc { line-height: 1.7; margin-bottom: 2rem; color: #b0b0d0; }
+    .features {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .tag {
+      background: #1e1e40; border: 1px solid #3a3a7a;
+      border-radius: 20px; padding: 0.4rem 1rem;
+      font-size: 0.85rem; color: #a0a0c0;
+    }
+    .stack {
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .stack-item { background: #1a1a35; border-radius: 8px; padding: 0.5rem 1rem; font-size: 0.9rem; }
+    .setup {
+      background: #0f0f24; border: 1px solid #1e1e40;
+      border-radius: 10px; padding: 1.2rem; text-align: left; margin-bottom: 1.5rem;
+    }
+    .setup pre {
+      background: #1a1a30; border-radius: 6px; padding: 1rem;
+      font-size: 0.85rem; overflow-x: auto; color: #a0e0a0;
+    }
+    code { color: #c0f0c0; }
+    .note { font-size: 0.8rem; color: #666; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Project Riko</h1>
+    <p class="subtitle">Your AI Anime Companion</p>
+    <p class="desc">
+      Riko is an anime-focused LLM project by Just Rayen. She listens, remembers your conversations,
+      and responds in a snarky anime girl voice — powered by GPT-4.1-mini, GPT-SoVITS voice synthesis,
+      and Faster-Whisper ASR.
+    </p>
+    <div class="features">
+      <span class="tag">💬 LLM Dialogue</span>
+      <span class="tag">🧠 Memory</span>
+      <span class="tag">🔊 Voice Synthesis</span>
+      <span class="tag">🎧 ASR</span>
+      <span class="tag">⚙️ YAML Config</span>
+    </div>
+    <div class="stack">
+      <span class="stack-item">OpenAI GPT</span>
+      <span class="stack-item">GPT-SoVITS</span>
+      <span class="stack-item">Faster-Whisper</span>
+    </div>
+    <div class="setup">
+      <strong>Quick Start</strong>
+      <pre>pip install uv
+uv pip install -r requirements.txt
+python main_chat.py</pre>
+    </div>
+    <p class="note">Requires Python 3.10+ · Windows 10+ or Linux Ubuntu · Microphone &amp; speakers recommended</p>
+  </div>
+</body>
+</html>
