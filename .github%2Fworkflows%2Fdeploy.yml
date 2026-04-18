@@ -1,0 +1,12 @@
+name: Deploy to GitHub Pages
+
+t: push: branches: [main] workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency: group: "pages" cancel-in-progress: false
+
+jobs:"ss: build: runs-on: ubunt-latest steps: - name: Checkout   uses: actions/checkout v4    with:    persist-credentials: false - name: Setup Pages   uses: actions/configure-pages v4 - name: Upload artifact   uses: actions/upload-pages-artifact v3    with:    path: '.'
